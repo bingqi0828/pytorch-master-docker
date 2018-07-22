@@ -6,8 +6,8 @@ RUN pacman -Sy --noconfirm python python-numpy python-pyaml python-setuptools py
 RUN pip install mkl mkl-include cmake typing ninja
 
 # python 2
-RUN pacman -Sy --noconfirm python2 python2-numpy python2-pyaml python2-setuptools python2-cffi python2-pip
-RUN pip2 install mkl mkl-include cmake typing
+RUN pacman -Sy --noconfirm python2 python2-numpy python2-pyaml python2-setuptools python2-cffi python2-pip python2-typing
+RUN pip2 install mkl mkl-include cmake
 
 RUN git clone --depth=1 https://github.com/pytorch/pytorch.git
 RUN cd pytorch && git submodule update --init

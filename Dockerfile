@@ -13,6 +13,7 @@ RUN git clone --depth=1 https://github.com/pytorch/pytorch.git
 RUN cd pytorch && git submodule update --init
 
 # python 3
-RUN cd pytorch && python setup.py install
+RUN cd pytorch && python setup.py install && pip install ignite
 # python 2
-RUN cd pytorch && python2 setup.py clean install
+RUN cd pytorch && python2 setup.py clean install && pip2 install ignite
+
